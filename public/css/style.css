@@ -10,19 +10,23 @@ body {
 h1, p {
     margin: 0;
     padding: 0; 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 100;
 }
 
-
 a {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
     font-weight: 100;
 }
 
+a:hover {
+    color: #adadad; 
+}
+
 li {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
     list-style: none;
 }
 
@@ -40,6 +44,19 @@ li {
     padding: 40px; 
 }
 
+.Btn_Logout {
+    background: none;
+    border: none; 
+    font-size: 16px; 
+    margin: 0;
+    padding: 0; 
+    cursor: pointer;
+}
+
+.Btn_Logout:hover {
+    color: #adadad; 
+}
+
 
 /* HOME */
 .Home_Headline {
@@ -47,6 +64,53 @@ li {
     color: #ffffff; 
     text-align: center;
     padding: 120px; 
+}
+
+/* LOGIN */
+.Login {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    display: flex; 
+    justify-content: center;
+    padding: 100px; 
+}
+
+.Login_Container {
+    background: rgba(32, 32, 32, 0.842);  
+    padding: 40px; 
+}
+
+.Login_Form-Email, .Login_Form-Password, .Login_Form-Btn {
+    display: flex; 
+    flex-direction: column;
+    margin-top: 20px; 
+    color: #ffffff; 
+}
+
+.Login_Form-Btn {
+    margin-top: 30px; 
+}
+
+.Login_Form-Btn-Link-SignUp {
+    text-align: center;
+    font-size: 13px; 
+    padding: 10px; 
+    cursor: pointer;
+    color: #ffffff; 
+}
+
+.Login_Form-Remember-label, .Login_Form-Btn-Link {
+    color: #ffffff; 
+}
+
+.Login_Form-Btn-Link {
+    margin-top: 10px; 
+    text-align: center;
+    font-size: 15px; 
+}
+
+.Login_Form-Btn-Link:hover {
+    color: #adadad; 
 }
 
 /* FOOTER */ 
@@ -66,11 +130,12 @@ li {
 }
 
 .Footer_Contact-Headline {
-    font-size: 20px; 
+    font-size: 17px; 
+    font-weight: 400;
 }
 
 .Footer_Contact-Paragraph {
-    margin-top: 15px; 
+    margin-top: 13px; 
     font-size: 15px; 
 }
 
