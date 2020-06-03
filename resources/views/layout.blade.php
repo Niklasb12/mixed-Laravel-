@@ -11,7 +11,14 @@
         <a class="Nav_Link" href="/"> MENU </a>
         <a class="Nav_Link" href="/about"> RESERVATIONS </a>
         <a class="Nav_Link" href="/contact"> REVIEWS </a>
+        @guest
         <a class="Nav_Link" href="/login"> LOGIN </a>
+        @else
+        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button class="Nav_Link Btn_Logout" type="submit"> LOGOUT </button>
+        </form>   
+        @endguest
     </nav>
     <main class="Main">
         @yield('content')
@@ -28,7 +35,12 @@
         </div>
         <div class="Footer_Follow">
             <h1 class="Footer_Contact-Headline"> FOLLOW </h>
-            <p class="Footer_Contact-Paragraph"> Instagram <br> Facebook <br> Twitter </p>        </div>
+            <p class="Footer_Contact-Paragraph"> Instagram <br> Facebook <br> Twitter </p>  
+            <!-- <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit"> logout </button>
+            </form>       -->
+        </div>
     </footer>
 </body>
 </html>
