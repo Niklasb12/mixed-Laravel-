@@ -11,6 +11,7 @@
         <a class="Nav_Link" href="/"> MENU </a>
         <a class="Nav_Link" href="/about"> RESERVATIONS </a>
         <a class="Nav_Link" href="/contact"> REVIEWS </a>
+        <a class="Nav_Link" href="/login"> LOGIN </a>
     </nav>
     <main class="Main">
         @yield('content')
