@@ -20,7 +20,7 @@
             <h1 class="Menu_Headline"> DRINKS </h>
             <p class="Menu_Paragraph"> WHITE ON GLASS <br> White on the house <br> Les Fumées Blanches <br> Domaine Lalande <br> Les Belles Dames </p>  
             <p class="Menu_Paragraph"> RED ON GLASS <br> Red on the house <br> Côtes-du-Rhône <br> Château Morillo <br> Château de Seguin <br> Bouchard Aîné </p>  
-            <p class="Menu_Paragraph"> BEER </p> 
+            <p class="Menu_Paragraph"> BEER <br> Mariestad 50cl <br> Eriksberg 50cl <br> Hoegaarden 33cl <br> Carlsberg 33cl <br> Breznak 33cl <br> Stella artois 33cl </p>
             <p class="Menu_Paragraph"> SPARKLING <br> Champagne, Pol Roger <br> Cremant, Cremant de Bourgogne <br> Cava, Freixenet <br> Prosecco, Castelforte </p> 
             <p class="Menu_Paragraph"> SOFT DRINKS <br> Coke <br> Sprite <br> Fanta </p> 
         </div>

@@ -8,12 +8,13 @@
 </head>
 <body>
     <nav class="Nav">
+        <a class="Nav_Link" href="/"> HOME </a>
         <a class="Nav_Link" href="/menu"> MENU </a>
-        <a class="Nav_Link" href="/reservations"> RESERVATIONS </a>
         <a class="Nav_Link" href="/contact"> REVIEWS </a>
         @guest
         <a class="Nav_Link" href="/login"> LOGIN </a>
         @else
+        <a class="Nav_Link" href="/reservations"> RESERVATIONS </a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf
             <button class="Nav_Link Btn_Logout" type="submit"> LOGOUT </button>
