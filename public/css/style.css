@@ -80,6 +80,7 @@ li {
     color: #ffffff;
     text-align: center;
     padding: 120px;
+    margin-bottom: 80px;
 }
 
 
@@ -100,11 +101,18 @@ li {
 /* LOGIN */
 
 .Login {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/BACKGROUND_LoginSignUp.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
     display: flex;
     justify-content: center;
     padding: 100px;
+    margin-bottom: 70px; 
 }
 
 .Login_Container {
