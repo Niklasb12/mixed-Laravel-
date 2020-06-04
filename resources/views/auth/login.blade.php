@@ -30,8 +30,8 @@
                         {{ __('Remember Me') }}
                     </label>
                 </div>
-                <div class="Login_Form-Btn">
-                    <button type="submit">
+                <div class="Login_Form-Btn_Container">
+                    <button class="Login_Form-Btn" type="submit">
                         {{ __('LogIn') }}
                     </button>
                     <a class="Login_Form-Btn-Link-SignUp" href="/register"> SignUp </a>

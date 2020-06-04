@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("../img/HOME.jpg");
+    background-image: url("../img/home.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -31,6 +31,7 @@ a {
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
     font-weight: 100;
+    color: #ffffff;
 }
 
 a:hover {
@@ -66,6 +67,8 @@ li {
     margin: 0;
     padding: 0;
     cursor: pointer;
+    padding: 40px;
+    font-weight: 100;
 }
 
 .Btn_Logout:hover {
@@ -81,6 +84,58 @@ li {
     text-align: center;
     padding: 120px;
     margin-bottom: 80px;
+}
+
+
+
+/* MENU */
+
+.Menu_Body {
+    background-image: url("../img/menu.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.Menu_Container {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #ffffff;
+    padding-bottom: 100px; 
+    margin-top: 60px; 
+}
+
+.Menu_Container-Lunch {
+    padding: 50px; 
+}
+
+.Menu_Container-Dinner {
+    padding: 50px; 
+}
+
+.Menu_Container-Drinks {
+    padding: 50px; 
+}
+
+.Menu_Headline {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.Menu_Paragraph {
+    margin-top: 13px;
+    font-size: 15px;
+}
+
+
+/* RESERVATIONS */ 
+.Reservations_Body {
+    background-image: url("../img/reservations.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 
@@ -125,15 +180,28 @@ li {
 
 .Login_Form-Email,
 .Login_Form-Password,
-.Login_Form-Btn {
+.Login_Form-Btn_Container {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     color: #ffffff;
 }
 
-.Login_Form-Btn {
+.Login_Form-Btn_Container {
     margin-top: 30px;
+}
+
+.Login_Form-Btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.Login_Form-Btn:hover {
+    color: #adadad;
 }
 
 .Login_Form-Btn-Link-SignUp {
@@ -141,6 +209,7 @@ li {
     font-size: 13px;
     padding: 10px;
     cursor: pointer;
+    font-weight: 400;
     color: #ffffff;
 }
 
@@ -177,7 +246,7 @@ li {
 
 .Footer_Contact {
     padding: 30px;
-    margin-right: 220px;
+    margin-right: 220px; 
 }
 
 .Footer_Contact-Headline {
@@ -200,10 +269,11 @@ li {
 
 .Footer_Copy-Paragraph {
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 11px;
+    text-align: center;
 }
 
 .Footer_Follow {
     padding: 30px;
-    margin-left: 220px;
+    margin-left: 220px; 
 }

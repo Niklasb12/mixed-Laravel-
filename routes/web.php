@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/menu', function () {
+    return view('menu');
+});
+
+Route::get('/reservations', function () {
+    return view('reservations');
+});
+
+
 // Route::get('/login', 'HomeController@login');
 
 Auth::routes();

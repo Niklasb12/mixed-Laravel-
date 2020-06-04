@@ -8,8 +8,8 @@
 </head>
 <body>
     <nav class="Nav">
-        <a class="Nav_Link" href="/"> MENU </a>
-        <a class="Nav_Link" href="/about"> RESERVATIONS </a>
+        <a class="Nav_Link" href="/menu"> MENU </a>
+        <a class="Nav_Link" href="/reservations"> RESERVATIONS </a>
         <a class="Nav_Link" href="/contact"> REVIEWS </a>
         @guest
         <a class="Nav_Link" href="/login"> LOGIN </a>
@@ -26,11 +26,11 @@
     <footer class="Footer"> 
         <div class="Footer_Contact">
             <h1 class="Footer_Contact-Headline"> CONTACT </h>
-            <p class="Footer_Contact-Paragraph"> Engelbrektsplan 1 <br> 114 34 <br> Stockholm </p>
+            <p class="Footer_Contact-Paragraph"> Engelbrektsplan 1 <br> 114 34 Stockholm </p>
             <p class="Footer_Contact-Paragraph"> Tel: 072 389 38 51 <br> Email: mixed@hotmail.com </p>
         </div>
         <div class="Footer_Copy">
-            <h1 class="Footer_Copy-Headline"> M | X E D</h1>
+            <a href="/"><h1 class="Footer_Copy-Headline"> M | X E D</h1></a>
             <p class="Footer_Copy-Paragraph">© MIXED 2020. ALL RIGHTS RESERVED</p> 
         </div>
         <div class="Footer_Follow">

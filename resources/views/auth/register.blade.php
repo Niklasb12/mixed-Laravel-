@@ -46,8 +46,8 @@
                     </div>
                 </div>
 
-                <div class="Login_Form-Btn">
-                    <button type="submit" class="btn btn-primary">
+                <div class="Login_Form-Btn_Container">
+                    <button class="Login_Form-Btn" type="submit" class="btn btn-primary">
                         {{ __('SignUp') }}
                     </button>
                     <a class="Login_Form-Btn-Link-SignUp" href="/login"> LogIn </a>
