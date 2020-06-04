@@ -100,19 +100,22 @@ li {
 
 /* LOGIN */
 
-.Login {
-    margin: 0;
-    padding: 0;
+.Login_Body {
     background-image: url("../img/BACKGROUND_LoginSignUp.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
+}
+
+.Login {
+    margin: 0;
+    padding: 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
     display: flex;
     justify-content: center;
     padding: 100px;
-    margin-bottom: 70px; 
+    margin-bottom: 70px;
 }
 
 .Login_Container {
