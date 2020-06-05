@@ -5,8 +5,9 @@
 <body class="Reservations_Body">
     <div class="Login">
         <div class="Create_Container">
-            <form class="Form" method="POST" action="/reservations">
-                {{ csrf_field() }}
+            <form class="Form" method="POST" action="/reservations/{{ $reservations->id }}">
+                @method('PATCH')
+                @csrf
                 <div class="Create_Form-Input">
                     <input type="text" name="reservationType" placeholder="Lunch or Dinner" value="{{ $reservations->reservationType }}">
                 </div>

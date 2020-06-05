@@ -27,7 +27,13 @@ Route::get('/reservations', 'ReservationController@index');
 
 Route::get('/reservations/create', 'ReservationController@create');
 
+Route::get('/reservations/{reservation}/edit', 'ReservationController@edit');
+
 Route::post('/reservations', 'ReservationController@store');
+
+Route::patch('/reservations/{reservation}', 'ReservationController@update');
+
+Route::delete('/reservations/{reservation}', 'ReservationController@destroy');
 
 
 // Route::get('/login', 'HomeController@login');

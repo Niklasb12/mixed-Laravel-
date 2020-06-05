@@ -13,10 +13,16 @@
                 <p class="Reservations_Paragraph"> Amount: {{ $reservation->amount}}</p>
         {{-- </a> --}}
                 <div class="Reservation-Btn_Container">
-                    <a class="Reservation-Btn" href="/update"> Update </a>
-                    <button class="Reservation-Btn" type="submit">
-                        {{ __('Delete') }}
-                    </button>
+                    <a class="Reservation-Btn" href="reservations/{{ $reservation->id }}/edit"> Update </a>
+                    <form class="Form"method="POST"action="/reservations/{{ $reservation->id }}">
+                        @method('DELETE')
+                        @csrf
+                        <div>
+                            <button class="Reservation-Btn" type="submit">
+                                {{ __('Delete') }}
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         @endforeach

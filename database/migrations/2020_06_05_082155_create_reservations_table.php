@@ -18,7 +18,7 @@ class CreateReservationsTable extends Migration
             $table->unsignedBigInteger('users_id');
             $table->string('reservationType');
             // $table->unsignedBigInteger('category_id');
-            $table->string('date');
+            $table->date('date');
             $table->unsignedBigInteger('amount');
             $table->timestamps();
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
