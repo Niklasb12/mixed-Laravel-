@@ -19,9 +19,15 @@ Route::get('/menu', function () {
     return view('menu');
 });
 
-Route::get('/reservations', function () {
-    return view('reservations');
-});
+// Route::get('/reservations', function () {
+//     return view('reservations');
+// });
+
+Route::get('/reservations', 'ReservationController@index');
+
+Route::get('/reservations/create', 'ReservationController@create');
+
+Route::post('/reservations', 'ReservationController@store');
 
 
 // Route::get('/login', 'HomeController@login');
