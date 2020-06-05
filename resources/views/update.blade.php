@@ -8,16 +8,16 @@
             <form class="Form" method="POST" action="/reservations">
                 {{ csrf_field() }}
                 <div class="Create_Form-Input">
-                    <input type="text" name="reservationType" placeholder="Lunch or Dinner">
+                    <input type="text" name="reservationType" placeholder="Lunch or Dinner" value="{{ $reservations->reservationType }}">
                 </div>
                 <div class="Create_Form-Input">
-                    <input name="date" placeholder="Date">
+                    <input name="date" placeholder="Date" value="{{ $reservations->date }}">
                 </div>
                 <div class="Create_Form-Input">
-                    <input name="amount" placeholder="Amount of guests">
+                    <input name="amount" placeholder="Amount of guests" value="{{ $reservations->amount }}">
                 </div>
                 <div class="Create_Form-Btn_Container">
-                    <button class="Create_Form-Btn" type="submit"> Book now </button>
+                    <button class="Create_Form-Btn" type="submit"> Update </button>
                 </div>
             </form>
         </div>
