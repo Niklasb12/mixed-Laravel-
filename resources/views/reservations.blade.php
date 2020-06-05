@@ -2,18 +2,24 @@
 
 @section('content') 
 <body class="Reservations_Body">
-    <div class="Create_Container">
+    <p class="Reservations_Link"><a href="/reservations/create"> NEW RESERVATION</a></p>
+    <div class="Reservations_Container">
         @foreach ($reservations as $reservation)
-            <div class="Create_Content">
-                <h1> RESERVATIONS </h1>
+            <div class="Reservations_Content">
+                <h1 class="Reservations_Headline"> RESERVATION </h1>
         {{-- <a href="/reservations/{{ $reservation->id }}"> --}}
-                <p>Type : {{ $reservation->reservationType}}</p>
-                <p>Date : {{ $reservation->date}}</p>
-                <p>Amount : {{ $reservation->amount}}</p>
+                <p class="Reservations_Paragraph"> Type: {{ $reservation->reservationType}}</p>
+                <p class="Reservations_Paragraph"> Date: {{ $reservation->date}}</p>
+                <p class="Reservations_Paragraph"> Amount: {{ $reservation->amount}}</p>
         {{-- </a> --}}
+                <div class="Reservation-Btn_Container">
+                    <a class="Reservation-Btn" href="/update"> Update </a>
+                    <button class="Reservation-Btn" type="submit">
+                        {{ __('Delete') }}
+                    </button>
+                </div>
             </div>
         @endforeach
     </div>
-    <a href="/reservations/create">Create</a>
 </body>
 @endsection
