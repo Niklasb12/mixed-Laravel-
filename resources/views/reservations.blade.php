@@ -8,9 +8,9 @@
             <div class="Reservations_Content">
                 <h1 class="Reservations_Headline"> RESERVATION </h1>
         {{-- <a href="/reservations/{{ $reservation->id }}"> --}}
-                <p class="Reservations_Paragraph"> Type: {{ $reservation->reservationType}}</p>
-                <p class="Reservations_Paragraph"> Date: {{ $reservation->date}}</p>
-                <p class="Reservations_Paragraph"> Amount: {{ $reservation->amount}}</p>
+                <p class="Reservations_Paragraph"> Type: {{ $reservation->reservationType }}</p>
+                <p class="Reservations_Paragraph"> Date: {{ $reservation->date }}</p>
+                <p class="Reservations_Paragraph"> Amount: {{ $reservation->amount }}</p>
         {{-- </a> --}}
                 <div class="Reservation-Btn_Container">
                     <a class="Reservation-Btn" href="reservations/{{ $reservation->id }}/edit"> Update </a>

@@ -204,6 +204,16 @@ li {
     margin: 10px;
 }
 
+.Create_Form-Select {
+    margin-left: 10px;
+    width: 90%;
+    height: 23px;
+}
+
+.Input_Date {
+    width: 97%;
+}
+
 .Create_Form-Btn {
     color: #ffffff;
     background: none;
