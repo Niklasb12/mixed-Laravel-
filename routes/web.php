@@ -36,6 +36,16 @@ Route::patch('/reservations/{reservation}', 'ReservationController@update');
 Route::delete('/reservations/{reservation}', 'ReservationController@destroy');
 
 
+Route::get('/reviews', 'ReviewController@index');
+
+Route::get('/reviews/create', 'ReviewController@create'); 
+
+Route::post('/reviews', 'ReviewController@store');
+
+Route::get('/myreviews', 'ReviewController@show'); 
+
+Route::delete('/reviews/{review}', 'ReviewController@destroy');
+
 // Route::get('/login', 'HomeController@login');
 
 Auth::routes();

@@ -23,7 +23,7 @@ class ReservationController extends Controller
 
     public function create() {
 
-        return view('create');
+        return view('reservations.create');
 
     }
 
@@ -60,7 +60,7 @@ class ReservationController extends Controller
 
         $reservations = Reservation::findOrFail($id);
 
-        return view('edit', compact('reservations'));
+        return view('reservations.edit', compact('reservations'));
 
     }
 

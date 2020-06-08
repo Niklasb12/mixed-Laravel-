@@ -10,7 +10,7 @@
     <nav class="Nav">
         <a class="Nav_Link" href="/"> HOME </a>
         <a class="Nav_Link" href="/menu"> MENU </a>
-        <a class="Nav_Link" href="/contact"> REVIEWS </a>
+        <a class="Nav_Link" href="/reviews"> REVIEWS </a>
         @guest
         <a class="Nav_Link" href="/login"> LOGIN </a>
         @else
