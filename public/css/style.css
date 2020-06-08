@@ -235,6 +235,59 @@ li {
 }
 
 
+/* REVIEW */
+
+.Review_Body {
+    background-image: url("../img/reservations.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.Review_Link-Container {
+    display: flex;
+    justify-content: center;
+}
+
+.Review_Link {
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.Review_Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.Review_Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(211, 211, 211, 0.445);
+    padding: 30px;
+    margin: 20px;
+    width: 40%;
+    min-height: 200px;
+}
+
+.Review_Headline {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.Review_Paragraph {
+    color: #ffffff;
+}
+
+.Review_Button {
+    margin-top: 100px;
+}
+
+
 /* LOGIN */
 
 .Login {

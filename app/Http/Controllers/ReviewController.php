@@ -3,10 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Review;
+use App\User;
 use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
+
+    public function __construct()
+    {
+        // $this->middleware('auth');
+        // $this->middleware('auth')->only(['store', 'update']);
+        $this->middleware('auth')->except('index');
+    }
+  
     /**
      * Display a listing of the resource.
      *
@@ -14,9 +23,21 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        $reviews = Review::all();
+
+        // $reviews = Review::all();
+        // $this->authorize('view', $reviews);
+        // $user = User::where('review_id', $reviews->id)->get();
+        // dd($user);
+        // return view('reviews', ['reviews' => $reviews, 'user' => $user]);
+
+        $reviews = Review::with('user')->get();
+
+        $users = User::all();
+
+        dd($reviews);
 
         return view('reviews', ['reviews' => $reviews]);
+        
     }
 
     /**

@@ -8,6 +8,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+
+
+    public function review() {
+        
+        return $this->hasMany(Review::class);
+        
+    }
+
+
     use Notifiable;
 
     /**
