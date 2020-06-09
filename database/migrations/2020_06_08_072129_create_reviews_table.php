@@ -17,7 +17,7 @@ class CreateReviewsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('users_id');
             $table->string('title');
-            $table->string('content');
+            $table->text('content');
             $table->timestamps();
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
         });

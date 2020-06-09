@@ -25,16 +25,18 @@ class ReviewController extends Controller
     {
 
         // $reviews = Review::all();
+        // $reviews = Advert::findOrFail($id);
         // $this->authorize('view', $reviews);
         // $user = User::where('review_id', $reviews->id)->get();
         // dd($user);
         // return view('reviews', ['reviews' => $reviews, 'user' => $user]);
 
-        $reviews = Review::with('user')->get();
+        // $reviews = Review::with('user')->get();
+        $reviews = Review::all();
 
         $users = User::all();
 
-        dd($reviews);
+        // dd($reviews);
 
         return view('reviews', ['reviews' => $reviews]);
         

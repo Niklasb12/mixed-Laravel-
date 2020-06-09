@@ -16,7 +16,9 @@
         {{-- <a href="/reservations/{{ $reservation->id }}"> --}}
                 <p class="Review_Paragraph"> Title: {{ $review->title }}</p>
                 <p class="Review_Paragraph"> Content: {{ $review->content }}</p>
-                <p class="Review_Paragraph"> Content: {{ $review->user->name }}</p>
+                <div class="Author_Content">
+                    <p class="Review_Paragraph-Author"> Author: {{ $review->user->name }}</p>
+                </div>
         {{-- </a> --}}
             </div>
         @endforeach
