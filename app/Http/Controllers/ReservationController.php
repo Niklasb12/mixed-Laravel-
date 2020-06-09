@@ -32,6 +32,7 @@ class ReservationController extends Controller
 
         $attributes = request()->validate([
             'reservationType' => ['required', 'min:5'],
+            'time' => ['required'],
             'date' => ['required', 'min:3', 'date_format:Y-m-d'],
             'amount' => ['required', 'min:1']
         ]);

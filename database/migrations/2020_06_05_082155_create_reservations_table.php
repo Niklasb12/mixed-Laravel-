@@ -17,6 +17,7 @@ class CreateReservationsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('users_id');
             $table->string('reservationType');
+            $table->string('time');
             // $table->unsignedBigInteger('category_id');
             $table->date('date');
             $table->unsignedBigInteger('amount');

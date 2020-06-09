@@ -206,14 +206,23 @@ li {
     margin: 10px;
 }
 
-.Create_Form-Select {
-    margin-left: 10px;
+.Create_Form-Select, .Create_Form-Select-Time {
+    margin-left: 10px; 
     width: 90%;
     height: 23px;
 }
 
+.Create_Form-Select-Time {
+    margin-top: 10px;
+}
+
 .Input_Date {
     width: 97%;
+}
+
+.Input_Amount {
+    width: 95%;
+    height: 18px; 
 }
 
 .Create_Form-Btn {
