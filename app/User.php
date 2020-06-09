@@ -10,6 +10,11 @@ class User extends Authenticatable
 {
 
 
+    public function isAdmin(){
+        return $this->user_type_id == 1;
+    }
+
+
     public function review() {
         
         return $this->hasMany(Review::class);

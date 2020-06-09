@@ -15,6 +15,7 @@ class UserSeeder extends Seeder
             'name' => 'Carro',
             'email' => 'carro@gmail.com',
             'password' => '$2y$10$7HdJSbpAuGGzXd4TipGGUePVGcCJqoGJ6WRfuQjbwHg4HH0Sc43mi',
+            'user_type_id' => 1,
         ]);
         
         DB::table('users')->insert([

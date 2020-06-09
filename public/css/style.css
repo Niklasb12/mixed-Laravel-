@@ -169,6 +169,10 @@ li {
     color: #ffffff;
 }
 
+.Reservations_Paragraph-notApproved {
+    color: red;
+}
+
 .Reservation-Btn_Container {
     display: flex;
     flex-direction: row;
@@ -206,8 +210,9 @@ li {
     margin: 10px;
 }
 
-.Create_Form-Select, .Create_Form-Select-Time {
-    margin-left: 10px; 
+.Create_Form-Select,
+.Create_Form-Select-Time {
+    margin-left: 10px;
     width: 90%;
     height: 23px;
 }
@@ -222,7 +227,7 @@ li {
 
 .Input_Amount {
     width: 95%;
-    height: 18px; 
+    height: 18px;
 }
 
 .Create_Form-Btn {

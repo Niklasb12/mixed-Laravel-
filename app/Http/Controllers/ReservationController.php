@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Reservation;
+use App\User;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
@@ -61,11 +62,13 @@ class ReservationController extends Controller
 
         $reservations = Reservation::findOrFail($id);
 
-        return view('reservations.edit', compact('reservations'));
+        $user = User::findOrFail(auth()->id());
+
+        return view('reservations.edit', ['reservations' => $reservations, 'user' => $user]);
 
     }
 
-    public function update($id)
+    public function update(Request $request, $id)
     {
 
         $reservations = Reservation::findOrFail($id);
@@ -73,6 +76,15 @@ class ReservationController extends Controller
         $reservations->reservationType = request('reservationType');
         $reservations->date = request('date');
         $reservations->amount = request('amount');
+
+        $user = User::findOrFail(auth()->id());
+        if($user->isAdmin()){
+            if($request->has('approved') && request('approved')==='true'){
+                $reservations->approved = 1;
+            }else{
+                $reservations->approved = 0;
+            }
+        }
 
         $reservations->save();
 
