@@ -20,8 +20,14 @@ class UserSeeder extends Seeder
         
         DB::table('users')->insert([
             'name' => 'Niklas',
-            'email' => 'Niklasborg12@gmail.com',
+            'email' => 'niklasborg12@gmail.com',
             'password' => '$2y$10$TkFwEjRKqzM0G4Q2/m6RnOZec33VLSB04v6yvyDMy.a.UFrFxjUL2',
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Cassandra',
+            'email' => 'cassandra@gmail.com',
+            'password' => '$2y$10$FT/ppFeuakdexOTKrIuHe.3TXb4ppXkrffIv1i2PNpYX2255WEi5q',
         ]);
     }
 }

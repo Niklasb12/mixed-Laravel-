@@ -39,7 +39,7 @@
                 @if ($user->isAdmin())
                 <div>
                     <input type="checkbox" name="approved" value="true" {{$reservations->approved == 1 ? 'checked' : ''}}>
-                    <label for="approved">Godkänd</label>
+                    <label for="approved"> Approve </label>
                 </div>
                 @endif
                 <div class="Create_Form-Btn_Container">
