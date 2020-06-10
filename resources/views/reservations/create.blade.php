@@ -12,14 +12,13 @@
                     </div> --}}
                     <select class="Create_Form-Select" name="reservationType" id="">
                         <option class="disabled" value="" disabled selected>lunch or dinner</option>
-                        @foreach ($categories as $category)
-                        <option value="{{ $category->category}}">{{ $category->category }}</option>
+                        @foreach ($times as $time)
+                        <option value="{{ $time->category->category}}">{{ $time->category->category }}</option>
                         @endforeach
                     </select>
                     <select class="Create_Form-Select-Time" name="time" id="">
                         <option class="disabled" value="" disabled selected> what time? </option>
                         @foreach ($times as $time)
-                        @if(Time::get('reservationType')=='lunch')
                         <option value="{{ $time->time }}">{{ $time->time }}</option>
                         {{-- <option class="disabled" value="" disabled> lunch </option>
                         <option value="11.00">11.00</option>
@@ -34,7 +33,6 @@
                         <option value="20.00">20.00</option>
                         <option value="21.00">21.00</option>
                         <option value="22.00">22.00</option> --}}
-                        @endif
                         @endforeach
                     </select>
                     <div class="Create_Form-Input">
