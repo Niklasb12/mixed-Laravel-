@@ -37,10 +37,6 @@
         <div class="Footer_Follow">
             <h1 class="Footer_Contact-Headline"> FOLLOW </h>
             <p class="Footer_Contact-Paragraph"> Instagram <br> Facebook <br> Twitter </p>  
-            <!-- <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit"> logout </button>
-            </form>       -->
         </div>
     </footer>
 </body>

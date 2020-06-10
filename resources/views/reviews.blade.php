@@ -13,14 +13,12 @@
         @foreach ($reviews as $review)
             <div class="Review_Content">
                 <h1 class="Review_Headline"> REVIEWS </h1>
-        {{-- <a href="/reservations/{{ $reservation->id }}"> --}}
                 <p class="Review_Paragraph"> Title: {{ $review->title }}</p>
                 <p class="Review_Paragraph"> Content: {{ $review->content }}</p>
                 <div class="Author_Content">
                     <p class="Review_Paragraph-Author"> Author: {{ $review->user->name }}</p>
                     <p class="Review_Paragraph-Author"> Date: {{ $review->created_at }}</p>
                 </div>
-        {{-- </a> --}}
             </div>
         @endforeach
     </div>

@@ -10,10 +10,8 @@
         @foreach ($reviews as $review)
             <div class="Review_Content">
                 <h1 class="Review_Headline"> REVIEWS </h1>
-        {{-- <a href="/reservations/{{ $reservation->id }}"> --}}
                 <p class="Review_Paragraph"> Title: {{ $review->title }}</p>
                 <p class="Review_Paragraph"> Content: {{ $review->content }}</p>
-        {{-- </a> --}}
                 <div class="Reservation-Btn_Container">
                     <form class="Form"method="POST"action="/reviews/{{ $review->id }}">
                         @method('DELETE')

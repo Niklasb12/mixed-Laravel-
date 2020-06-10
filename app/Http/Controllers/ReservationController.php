@@ -18,8 +18,6 @@ class ReservationController extends Controller
 
         $reservations = Reservation::where('users_id', auth()->id())->get();
 
-        // $reservations = \App\Reservation::all();
-
         return view('reservations', ['reservations' => $reservations]);
 
     }
@@ -48,15 +46,6 @@ class ReservationController extends Controller
         $attributes['users_id'] = auth()->id();
         
         Reservation::create($attributes);
-
-        // Posts::create($attributes + ['owner_id' => auth()->id()]);
-
-        // $posts = new posts;
-
-        // $posts->title = request('title');
-        // $posts->desctription = request('desctription');
-
-        // $posts->save();
 
         return redirect('/reservations');
 

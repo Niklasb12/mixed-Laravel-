@@ -7,9 +7,6 @@
             <div class="Create_Container">
                 <form class="Form" method="POST" action="/reviews">
                     {{ csrf_field() }}
-                    {{-- <div class="Create_Form-Input">
-                        <input type="text" name="reservationType" placeholder="Lunch or Dinner">
-                    </div> --}}
                     <div class="Create_Form-Input">
                         <input class="Input_Date" type="text" name="title" placeholder="Title">
                     </div>

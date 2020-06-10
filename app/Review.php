@@ -8,10 +8,6 @@ class Review extends Model
 {
     protected $fillable = ['title','content','users_id', 'created_at'];
 
-
-    // protected $table = 'reviews';
-
-    // protected $primaryKey = 'id';
     
     public function user() {
 
@@ -19,12 +15,6 @@ class Review extends Model
 
     }
 
-//     public function user()
-// {
-//     return $this->belongsTo(User::class)->withDefault([
-//         'name' => 'Guest Author',
-//     ]);
-// }
 }
 
 

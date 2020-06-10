@@ -11,8 +11,6 @@ class ReviewController extends Controller
 
     public function __construct()
     {
-        // $this->middleware('auth');
-        // $this->middleware('auth')->only(['store', 'update']);
         $this->middleware('auth')->except('index');
     }
   
@@ -24,14 +22,6 @@ class ReviewController extends Controller
     public function index()
     {
 
-        // $reviews = Review::all();
-        // $reviews = Advert::findOrFail($id);
-        // $this->authorize('view', $reviews);
-        // $user = User::where('review_id', $reviews->id)->get();
-        // dd($user);
-        // return view('reviews', ['reviews' => $reviews, 'user' => $user]);
-
-        // $reviews = Review::with('user')->get();
         $reviews = Review::all();
 
         $users = User::all();
@@ -68,15 +58,6 @@ class ReviewController extends Controller
         
         Review::create($attributes);
 
-        // Posts::create($attributes + ['owner_id' => auth()->id()]);
-
-        // $posts = new posts;
-
-        // $posts->title = request('title');
-        // $posts->desctription = request('desctription');
-
-        // $posts->save();
-
         return redirect('/reviews');
     }
 
@@ -89,8 +70,6 @@ class ReviewController extends Controller
     public function show(Review $review)
     {
         $reviews = Review::where('users_id', auth()->id())->get();
-
-        // $reservations = \App\Reservation::all();
 
         return view('reviews.myreviews', ['reviews' => $reviews]);
     }
