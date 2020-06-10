@@ -36,8 +36,6 @@ class ReviewController extends Controller
 
         $users = User::all();
 
-        // dd($reviews);
-
         return view('reviews', ['reviews' => $reviews]);
         
     }

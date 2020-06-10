@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Reservation;
 use App\User;
+use App\Category;
+use App\Time;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
@@ -24,7 +26,11 @@ class ReservationController extends Controller
 
     public function create() {
 
-        return view('reservations.create');
+        $categories = Category::all();
+
+        $times = Time::all();
+
+        return view('reservations.create', ['times' => $times, 'categories' => $categories]);
 
     }
 
