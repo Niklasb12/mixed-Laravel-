@@ -76,6 +76,9 @@ class ReservationController extends Controller
         $reservations->time = request('time');
         $reservations->date = request('date');
         $reservations->amount = request('amount');
+        if($reservations->approved==1 || $reservations->approved==0){
+            $reservations->approved = 2;
+        }
 
         $user = User::findOrFail(auth()->id());
         if($user->isAdmin()){
