@@ -39,7 +39,7 @@ class ReservationController extends Controller
             'reservationType' => ['required', 'min:5'],
             'time' => ['required'],
             'date' => ['required', 'min:3', 'date_format:Y-m-d'],
-            'amount' => ['required', 'min:1', 'integer', 'between:1,10']
+            'amount' => ['required', 'min:1', 'integer', 'between:1, 10']
         ]);
 
 
@@ -73,15 +73,19 @@ class ReservationController extends Controller
         $reservations = Reservation::findOrFail($id);
 
         $reservations->reservationType = request('reservationType');
+        $reservations->time = request('time');
         $reservations->date = request('date');
         $reservations->amount = request('amount');
+        if($reservations->approved==1 || $reservations->approved==0){
+            $reservations->approved = 2;
+        }
         
 
         $user = User::findOrFail(auth()->id());
         if($user->isAdmin()){
-            if($request->has('approved') && request('approved')===1){
+            if($request->has('approved') && request('approved')==1) {
                 $reservations->approved = 1;
-            }else{
+            } else {
                 $reservations->approved = 0;
             }
         }

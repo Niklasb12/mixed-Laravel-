@@ -32,9 +32,7 @@
             </div>
         </div>
         @foreach ($errors->all() as $error)
-
            <p class="Create_Error">{{ $error }}</p>
-
         @endforeach
     </body>
 @endsection
