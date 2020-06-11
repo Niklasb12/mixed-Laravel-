@@ -28,10 +28,10 @@
                         <button class="Create_Form-Btn" type="submit"> Book now </button>
                     </div>
                 </form>
+                @foreach ($errors->all() as $error)
+                    <p class="Create_Error">{{ $error }}</p>
+                @endforeach
             </div>
         </div>
-        @foreach ($errors->all() as $error)
-           <p class="Create_Error">{{ $error }}</p>
-        @endforeach
     </body>
 @endsection
