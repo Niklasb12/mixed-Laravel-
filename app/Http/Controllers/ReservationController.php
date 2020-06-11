@@ -79,11 +79,10 @@ class ReservationController extends Controller
         if($reservations->approved==1 || $reservations->approved==0){
             $reservations->approved = 2;
         }
-        
 
         $user = User::findOrFail(auth()->id());
         if($user->isAdmin()){
-            if($request->has('approved') && request('approved')==1) {
+            if($request->has('approved') && request('approved')==1){
                 $reservations->approved = 1;
             } else {
                 $reservations->approved = 0;

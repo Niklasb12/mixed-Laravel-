@@ -30,7 +30,7 @@
                 @if ($user->isAdmin())
                 <div>
                     <input type="checkbox" name="approved" value="1" {{$reservations->approved == 1 ? 'checked' : ''}}>
-                    Approve 
+                    <label for="approved"> Approve </label>
                 </div>
                 @endif
                 <div class="Create_Form-Btn_Container">
@@ -39,5 +39,10 @@
             </form>
         </div>
     </div>
+    @foreach ($errors->all() as $error)
+
+    <p class="Create_Error">{{ $error }}</p>
+
+ @endforeach
 </body>
 @endsection
