@@ -16,7 +16,7 @@
                 </select>
 
                 <select class="Create_Form-Select-Time" name="time" id="">
-                    <option class="disabled" value="{{ $reservations->time }}" disabled selected> {{ $reservations->time }} </option>
+                    <option class="disabled" value="{{ $reservations->time }}" selected> {{ $reservations->time }} </option>
                     @foreach ($times as $time)
                     <option value="{{ $time->time }}">{{ $time->time }}</option>
                     @endforeach
@@ -32,10 +32,6 @@
                     <input type="checkbox" name="approved" value="1" {{$reservations->approved == 1 ? 'checked' : ''}}>
                     <label for="approved"> Approve </label>
                 </div>
-                <div>
-                    <input type="checkbox" name="approved" value="0" {{$reservations->approved == 0 ? 'checked' : ''}}>
-                    <label for="approved"> Not Approve </label>
-                </div>
                 @endif
                 <div class="Create_Form-Btn_Container">
                     <button class="Create_Form-Btn" type="submit"> Update </button>
@@ -43,5 +39,10 @@
             </form>
         </div>
     </div>
+    @foreach ($errors->all() as $error)
+
+    <p class="Create_Error">{{ $error }}</p>
+
+ @endforeach
 </body>
 @endsection
