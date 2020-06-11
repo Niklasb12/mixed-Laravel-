@@ -39,7 +39,7 @@ class ReservationController extends Controller
             'reservationType' => ['required', 'min:5'],
             'time' => ['required'],
             'date' => ['required', 'min:3', 'date_format:Y-m-d'],
-            'amount' => ['required', 'min:1', 'integer', 'between:1,10']
+            'amount' => ['required', 'min:1', 'integer', 'between:1, 10']
         ]);
 
 
@@ -84,7 +84,7 @@ class ReservationController extends Controller
         if($user->isAdmin()){
             if($request->has('approved') && request('approved')==1){
                 $reservations->approved = 1;
-            }else{
+            } else {
                 $reservations->approved = 0;
             }
         }
