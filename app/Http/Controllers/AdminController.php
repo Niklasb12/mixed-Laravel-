@@ -19,10 +19,11 @@ class AdminController extends Controller
     {
         abort_if(!User::findOrFail(auth()->id())->isAdmin(), 403);
 
+        $inProcess = Reservation::where('approved', 2)->get();
         $approved = Reservation::where('approved', 1)->get();
         $notApproved = Reservation::where('approved', 0)->get();
 
-        return view('admin.index', ['approved' => $approved, 'notApproved' => $notApproved]);
+        return view('admin.index', ['approved' => $approved, 'notApproved' => $notApproved, 'inProcess' => $inProcess]);
     }
 
 

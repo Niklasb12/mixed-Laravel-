@@ -13,6 +13,9 @@
                 @if ($reservation->approved==0)
                     <p class="Reservations_Paragraph-notApproved"> Not Approved </p>
                 @endif
+                @if ($reservation->approved==2)
+                <p class="Reservations_Paragraph-notApproved"> In process </p>
+                @endif
                 <p class="Reservations_Paragraph"> Type: {{ $reservation->reservationType }}</p>
                 <p class="Reservations_Paragraph"> Time: {{ $reservation->time }}</p>
                 <p class="Reservations_Paragraph"> Date: {{ $reservation->date }}</p>
