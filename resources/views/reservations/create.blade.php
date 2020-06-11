@@ -1,6 +1,5 @@
 @extends('layout')
-
-
+ 
 @section('content')
     <body class="Reservations_Body">
         <div class="Login">
