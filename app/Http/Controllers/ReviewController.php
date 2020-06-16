@@ -22,7 +22,9 @@ class ReviewController extends Controller
     public function index()
     {
 
-        $reviews = Review::all();
+        // $reviews = Review::all();
+
+        $reviews = Review::orderBy('created_at', 'DESC')->get();
 
         $users = User::all();
 
@@ -69,7 +71,8 @@ class ReviewController extends Controller
      */
     public function show(Review $review)
     {
-        $reviews = Review::where('users_id', auth()->id())->get();
+        $reviews = Review::where('users_id', auth()->id())->orderBy('created_at', 'DESC')->get();
+
 
         return view('reviews.myreviews', ['reviews' => $reviews]);
     }
@@ -108,6 +111,6 @@ class ReviewController extends Controller
         
         $reviews = Review::findOrFail($id)->delete();
 
-        return redirect('/reviews');
+        return redirect('/myreviews');
     }
 }
