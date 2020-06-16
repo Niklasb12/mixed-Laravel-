@@ -39,7 +39,13 @@ class ReservationController extends Controller
             'reservationType' => ['required', 'min:5'],
             'time' => ['required'],
             'date' => ['required', 'min:3', 'date_format:Y-m-d'],
-            'amount' => ['required', 'min:1', 'integer', 'between:1, 10']
+            'amount' => ['required', 'min:1', 'integer', 'between:1,10']
+
+        ],
+        [
+            'amount.between' => 'Hej.',
+            'time.required' => 'Hello.'
+        
         ]);
 
 
