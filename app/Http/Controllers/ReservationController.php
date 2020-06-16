@@ -96,8 +96,12 @@ class ReservationController extends Controller
         }
 
         $reservations->save();
-
-        return redirect('/reservations');
+        if($user->isAdmin()){
+            return redirect('/admin');
+            
+        }else{
+            return redirect('/reservations');
+        }
 
     }
 
