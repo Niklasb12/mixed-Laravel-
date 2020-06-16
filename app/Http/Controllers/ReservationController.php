@@ -36,15 +36,19 @@ class ReservationController extends Controller
     {
 
         $attributes = request()->validate([
-            'reservationType' => ['required', 'min:5'],
+            'reservationType' => ['required'],
             'time' => ['required'],
-            'date' => ['required', 'min:3', 'date_format:Y-m-d'],
-            'amount' => ['required', 'min:1', 'integer', 'between:1,10']
+            'date' => ['required', 'date_format:Y-m-d'],
+            'amount' => ['required', 'integer', 'between:1,10']
 
         ],
         [
-            'amount.between' => 'Hej.',
-            'time.required' => 'Hello.'
+
+            'amount.between' => 'Contact us if you are more then 10 guests.',
+            'time.required' => 'You have to choose a time.',
+            'reservationType.required' => 'You have to choose dinner or lunch.',
+            'date.required' => 'You have to choose a date.',
+            'amount.required' => 'You have to choose the amount of guests.',
         
         ]);
 
@@ -96,6 +100,7 @@ class ReservationController extends Controller
         }
 
         $reservations->save();
+        
         if($user->isAdmin()){
             return redirect('/admin');
             
